@@ -4,7 +4,7 @@ export const StyledFilterPanel = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0px 40px;
+    margin: 5px 40px;
     padding: 12px 0px;
     border-bottom: 1px solid ${({theme}) => theme.colors.seperator_color };
 

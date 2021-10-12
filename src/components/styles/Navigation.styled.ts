@@ -3,9 +3,9 @@ import styled from "styled-components";
 export const StyledNavigation = styled.div`
     display: flex;
     flex-direction: column;
-    height: 60px;
+    height: 50px;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-left: ${({theme}) => theme.margin_left };
 
     a, a:hover {
@@ -26,7 +26,7 @@ export const NavigationLinks = styled.div`
     }
 `
 export const SelectedNavigation = styled.div`
-    font-size: 18px;
+    font-size: 17px;
 
     & > span:first-child {
         font-weight: 500;
