@@ -2,21 +2,23 @@ import styled from "styled-components";
 
 export const StyledFilterPanel = styled.div`
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 5px 40px;
-    padding: 12px 0px;
+    flex-direction: column;
+    margin-right: 40px;
+    padding-bottom: 6px;
     border-bottom: 1px solid ${({theme}) => theme.colors.seperator_color };
 
-    & > div:first-child {
-        font-size: 15px;
-        font-weight: 600;
+    & > *:first-child {
+        align-self: flex-end;
     }
 `
 
 export const FirstSection = styled.div`
     width: 230px;
 `
-export const SeccondSection = styled.div`
-    flex-grow: 1;
+export const FilteredItemSection = styled.div`
+    display: flex;
+    padding-top: 10px;
+    padding-left: 10px;
+    align-items: flex-start;
+    flex-wrap: wrap;
 `

@@ -5,7 +5,7 @@ export const StyledFilteredItem = styled.div`
     color: ${({theme}) => theme.colors.secondary_text_color };
     font-size: 13px;
     padding: 3px 10px;
-    margin: 0 3px;
+    margin: 2px 3px;
     border-radius: 500px;
     border: 1px solid ${({theme}) => theme.colors.seperator_color };
     cursor: pointer;

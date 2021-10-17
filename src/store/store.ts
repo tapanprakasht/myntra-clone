@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import filterReducer from '../reducers/filter/filterSlice';
+import wishlistReducer from '../reducers/wishlistSlice';
 
 export const store = configureStore({
     reducer: {
-        filters: filterReducer
+        filters: filterReducer,
+        wishlist: wishlistReducer
     }
 })
 

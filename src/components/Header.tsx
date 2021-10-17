@@ -6,6 +6,7 @@ import {
   Search,
   HeaderOptions,
 } from "./styles/Header.styled";
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
@@ -29,16 +30,22 @@ function Header() {
       </HeaderMainContent>
       <HeaderOptions>
         <div>
-          <img src="./assets/profile.png" alt="" />
-          <div>Profile</div>
+          <Link to='/'>
+            <img src="./assets/profile.png" alt="" />
+            <div>Profile</div>
+          </Link>
         </div>
         <div>
-          <img src="./assets/wishlist.png" alt="" />
-          <div>Wishlist</div>
+          <Link to='/wishlist'>
+            <img src="./assets/wishlist.png" alt="" />
+            <div>Wishlist</div>
+          </Link>
         </div>
         <div>
-          <img src="./assets/bag.png" alt="" />
-          <div>Bag</div>
+          <Link to='/'>
+            <img src="./assets/bag.png" alt="" />
+            <div>Bag</div>
+          </Link>
         </div>
       </HeaderOptions>
     </StyledHeader>

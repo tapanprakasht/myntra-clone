@@ -31,26 +31,22 @@ type ChangeEvent = React.ChangeEvent<HTMLInputElement>;
 
 function Filter(props: FilterProps) {
   const { type } = props;
-  const [showDefaultFilterHeader, setShowDefaultFilterHeader] = useState<boolean>(true);
   const [showFilterSearchBar, setShowFilterSearchBar] = useState<boolean>(false);
   const [searchText, setSearchText] = useState<string>("");
   const dispatch = useAppDispatch();
   const appliedFilters = useAppSelector(selectAppliedFilters);
 
   const onClickSearch = () => {
-    setShowDefaultFilterHeader(false);
     setShowFilterSearchBar(true);
   };
 
   const onClickClose = () => {
-    setShowDefaultFilterHeader(true);
     setShowFilterSearchBar(false);
     setSearchText("");
   };
 
   const onChangeSearchText = (e: ChangeEvent) => {
     setSearchText(e.target.value);
-    console.log(e.target.value);
   };
 
   const onSelectFilterItem = (e: ChangeEvent, id: number, name: string) => {
@@ -89,27 +85,28 @@ function Filter(props: FilterProps) {
     }
   };
 
-  const hideSearch =
-    props.filterItems.length < 5 ? "filter_header_hide_search" : "";
   return (
     <StyledFilter>
       <FilterHeader>
-        <DefaultHeader show={showDefaultFilterHeader}>
+        <DefaultHeader show={!showFilterSearchBar}>
           <div>{props.title}</div>
-          <div className={hideSearch} onClick={onClickSearch}>
+          <div onClick={onClickSearch}>
             <img src="./assets/search.png" alt="" />
           </div>
         </DefaultHeader>
-        <FilterSearchBar show={showFilterSearchBar}>
-          <input
-            type="input"
-            value={searchText}
-            placeholder={props.searchPlaceHolder}
-            onChange={onChangeSearchText}
-            autoFocus
-          />
-          <span onClick={onClickClose}>X</span>
-        </FilterSearchBar>
+        {
+          showFilterSearchBar &&
+            <FilterSearchBar show={showFilterSearchBar}>
+              <input
+                type="input"
+                value={searchText}
+                placeholder={props.searchPlaceHolder}
+                onChange={onChangeSearchText}
+                autoFocus
+              />
+              <span onClick={onClickClose} data-testid='exit'>X</span>
+            </FilterSearchBar>
+        }
       </FilterHeader>
       <FilterListItems>{getListOfItems()}</FilterListItems>
       {props.filterItems.length > 7 ? (

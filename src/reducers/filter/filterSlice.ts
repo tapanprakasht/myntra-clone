@@ -32,11 +32,14 @@ const filterReducer = createSlice({
                 }
             });
             state.appliedFilters = updatedFilter;
+        },
+        clearAllFilter: (state) => {
+            state.appliedFilters = [];
         }
     }
 });
 
-export const { addFilter, removeFilter } = filterReducer.actions;
+export const { addFilter, removeFilter, clearAllFilter } = filterReducer.actions;
 export const selectAppliedFilters = (state: RootState): AppliedFilterItem[] => state.filters.appliedFilters;
 
 export default filterReducer.reducer;

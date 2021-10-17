@@ -6,6 +6,7 @@ export const StyledFilter = styled.div`
     align-items: center;
     width: 100%;
     padding: 10px 20px 0;
+    border-right: 1px solid ${({theme}) => theme.colors.seperator_color };
 `
 
 export const FilterHeader = styled.div`
@@ -97,4 +98,11 @@ export const FilterMoreItems = styled.div`
     padding-top: 3px;
     font-size: 14px;
     color: ${({ theme }) => theme.colors.pink_text_color };
+`
+
+export const FilterSeperator = styled.div`
+    width: 100%;
+    height: 1px;
+    margin: 10px 0;
+    background: ${({theme}) => theme.colors.seperator_color };
 `

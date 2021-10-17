@@ -62,7 +62,12 @@ export const GridItemBack = styled.div<GridItemBackProps>`
         color: ${({theme}) => theme.colors.secondary_text_color};
     }
 `
-export const WishList = styled.div`
+
+interface WishlistProps {
+    selected: boolean;
+}
+
+export const WishList = styled.div<WishlistProps>`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,6 +75,8 @@ export const WishList = styled.div`
     border-radius: 3px;
     padding: 5px 0;
     margin: 10px 0;
+    background: ${({ selected, theme }) => selected ? theme.colors.primary_background_color : 'white' };
+    color: ${({ selected, theme }) => selected ? 'white' : 'black' };;
 
     & > img {
         height: 15px;

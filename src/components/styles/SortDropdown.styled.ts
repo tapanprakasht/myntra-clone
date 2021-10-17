@@ -15,7 +15,8 @@ export const StyledSortDropdown = styled.div`
     }
 
     & > span:nth-child(2) {
-        font-size: 14px;
+        font-size: 13px;
+        font-weight: 600;
     }
 `
 

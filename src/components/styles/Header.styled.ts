@@ -102,13 +102,19 @@ export const HeaderOptions = styled.div`
     font-size: 13px;
     font-weight: 600;
 
-    & > div {
+    a, a:hover, a:focus, a:active {
+        text-decoration: none;
+        color: black;
+    }
+
+    & > div > a {
         padding: 0 10px;
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
 
-        & > img {
+        img {
             height: 20px;
         }
     }

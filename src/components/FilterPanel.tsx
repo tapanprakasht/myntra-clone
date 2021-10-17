@@ -1,28 +1,28 @@
 import FilteredItem from './FilteredItem';
 import SortDropdown from './SortDropdown';
-import { selectAppliedFilters } from '../reducers/filter/filterSlice';
+import { selectAppliedFilters, AppliedFilterItem } from '../reducers/filter/filterSlice';
 import { useSelector } from 'react-redux';
-import { AppliedFilterItem } from '../reducers/filter/filterSlice';
 
 import {
     StyledFilterPanel,
-    FirstSection,
-    SeccondSection }
+    FilteredItemSection }
 from './styles/FilterPanel.styled';
 
 function FilterPanel() {
     const appliedFilters = useSelector(selectAppliedFilters);
     return (
         <StyledFilterPanel>
-            <FirstSection>FILTERS</FirstSection>
-            <SeccondSection>
+            <SortDropdown/>
+            {
+                appliedFilters.length !== 0 &&
+                <FilteredItemSection>
                 {
                     appliedFilters.map((filter: AppliedFilterItem) => {
                         return <FilteredItem key={`${filter.id}-${filter.type}`} item={filter} />
                     })
                 }
-            </SeccondSection>
-            <SortDropdown/>
+                </FilteredItemSection>
+            }
         </StyledFilterPanel>
     )
 }
