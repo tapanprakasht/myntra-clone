@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { ListItem } from '../datasource/interfaces/ListItem';
-import { addWishlistItem, selectWishlistItems, removeWishlistItem } from '../reducers/wishlistSlice';
+import { addWishlistItem, selectWishlistItems } from '../reducers/wishlistSlice';
 import { useAppDispatch, useAppSelector } from '../store/hooks';
 import {
     StyledGridItem,

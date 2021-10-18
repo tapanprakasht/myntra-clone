@@ -15,7 +15,7 @@ import {
   Route
 } from 'react-router-dom';
 
-const Wishlist = React.lazy(() => import('./components/Wishlist'));
+const Wishlist = React.lazy(() => import('./components/wishlist/Wishlist'));
 
 export const theme = {
   colors: {
