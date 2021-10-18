@@ -1,3 +1,5 @@
+import React, { Suspense } from 'react';
+
 import Header from './components/Header';
 import Navigation from './components/Navigation';
 import FilterPanel from './components/FilterPanel';
@@ -12,7 +14,8 @@ import {
   Switch,
   Route
 } from 'react-router-dom';
-import Wishlist from './components/Wishlist';
+
+const Wishlist = React.lazy(() => import('./components/Wishlist'));
 
 export const theme = {
   colors: {
@@ -35,24 +38,26 @@ function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyles/>
       <Router>
-        <Container>
-          <Header/>
-          <Switch>
-            <Route exact path='/'>
-              <Navigation/>
-              <MainArea>
-                <FilterSection/>
-                <Content>
-                  <FilterPanel/>
-                  <GridContent/>
-                </Content>
-              </MainArea>
-            </Route>
-            <Route path='/wishlist'>
-              <Wishlist/>
-            </Route>
-          </Switch>
-        </Container>
+        <Suspense fallback={<div>Loading</div>}>
+          <Container>
+            <Header/>
+            <Switch>
+              <Route exact path='/'>
+                <Navigation/>
+                <MainArea>
+                  <FilterSection/>
+                  <Content>
+                    <FilterPanel/>
+                    <GridContent/>
+                  </Content>
+                </MainArea>
+              </Route>
+              <Route path='/wishlist'>
+                <Wishlist/>
+              </Route>
+            </Switch>
+          </Container>
+        </Suspense>
       </Router>
     </ThemeProvider>
   );
