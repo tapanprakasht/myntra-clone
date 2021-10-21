@@ -9,11 +9,6 @@ class ModalManager {
         const body = document.getElementsByTagName('body')[0] as HTMLBodyElement;
         const modalContainer = document.createElement('div');
         modalContainer.id = 'modal-container';
-        // modalContainer.style.position = 'absolute';
-        // modalContainer.style.top = '0';
-        // modalContainer.style.left = '0';
-        // modalContainer.style.right = '0';
-        // modalContainer.style.bottom = '0';
         body.insertAdjacentElement('beforeend', modalContainer);
         this.containerRef = modalContainer;
     }
