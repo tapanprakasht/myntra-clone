@@ -1,4 +1,4 @@
-import WishlistEmpty from "../WishlistEmpty"
+import WishlistEmpty from "./WishlistEmpty"
 import WishlistHeader from "./WishlistHeader"
 import { StyledWishlist } from '../styles/wishlist/Wishlist.styled';
 import WishlistContent from "./WishlistContent";

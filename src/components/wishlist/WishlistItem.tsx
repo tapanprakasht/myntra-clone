@@ -5,7 +5,8 @@ import { CloseButton, MoveToBag, StyledWishlistItem } from '../styles/wishlist/W
 import { PriceSection } from "./../styles/GridItem.styled";
 import { useAppDispatch } from "../../store/hooks";
 import { removeWishlistItem } from "../../reducers/wishlistSlice";
-
+import { toast } from '../toast/ToastManager';
+import { modal } from "../modal/ModalManager";
 interface WishlistItemProps {
     id: string
 }
@@ -14,7 +15,8 @@ function WishlistItem(props: WishlistItemProps) {
     const dispatch = useAppDispatch();
 
     const handleRemoveItem = () => {
-        dispatch(removeWishlistItem(props.id))
+        dispatch(removeWishlistItem(props.id));
+        toast.show(props.id);
     }
 
     const currentItem: ListItem = listItems.filter(item => item.id === props.id)[0];
@@ -30,7 +32,7 @@ function WishlistItem(props: WishlistItemProps) {
                 <span>({currentItem.offer})</span>
             </PriceSection>
             <MoveToBag>
-                <span>MOVE TO BAG</span>
+                <span onClick={() => modal.showModal(currentItem)}>MOVE TO BAG</span>
             </MoveToBag>
         </StyledWishlistItem>
     )

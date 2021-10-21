@@ -14,6 +14,7 @@ import {
   Switch,
   Route
 } from 'react-router-dom';
+import Modal from './components/modal/Modal';
 
 const Wishlist = React.lazy(() => import('./components/wishlist/Wishlist'));
 
@@ -27,7 +28,8 @@ export const theme = {
     orange_text_color: '#fd7d4b',
     pink_text_color: '#ff3f6c',
     blue_text_color: '#284de2',
-    primary_background_color: 'rgb(83, 87, 102)'
+    primary_background_color: 'rgb(83, 87, 102)',
+    toast_background_color: '#1e2031'
   },
   margin_left: '40px',
   tablet: '1000px'

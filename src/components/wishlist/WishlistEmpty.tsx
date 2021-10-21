@@ -1,4 +1,4 @@
-import { StyledWishlistEmpty, Container, Button } from './styles/WishlistEmpty.styled';
+import { StyledWishlistEmpty, Container, Button } from '../styles/wishlist/WishlistEmpty.styled';
 import { Link } from 'react-router-dom';
 
 function WishlistEmpty() {

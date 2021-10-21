@@ -9,7 +9,7 @@ function WishlistContent() {
     return (
         <StyledWishlistContent>
             {selectWishlsitItems.map(id => {
-                return <WishlistItem key={id} id={id}/>
+                return <WishlistItem key={id} id={id} />
             })}
         </StyledWishlistContent>
     )
