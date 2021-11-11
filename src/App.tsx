@@ -14,7 +14,6 @@ import {
   Switch,
   Route
 } from 'react-router-dom';
-import Modal from './components/modal/Modal';
 
 const Wishlist = React.lazy(() => import('./components/wishlist/Wishlist'));
 
