@@ -5,4 +5,5 @@ export interface ListItem {
     price: string;
     originalPrice: string;
     offer: string;
+    brand: string;
 }

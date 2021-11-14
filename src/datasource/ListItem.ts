@@ -8,6 +8,7 @@ export const listItems: ListItem[] = [
         price: 'Rs. 239',
         originalPrice: 'Rs. 599',
         offer: '60% OFF',
+        brand:'Roadster'
     },
     {
         id: '2',
@@ -15,31 +16,35 @@ export const listItems: ListItem[] = [
         subtitle: 'Solid Round Neck T-shirt',
         price: 'Rs. 384',
         originalPrice: 'Rs. 491',
-        offer: '65% OFF'
+        offer: '65% OFF',
+        brand:'Roadster'
     },
     {
         id: '3',
-        title: 'DILLINGER',
+        title: 'Max',
         subtitle: 'Solid Round Neck T-shirt',
         price: 'Rs. 491',
         originalPrice: 'Rs. 1199',
-        offer: '59% OFF'
+        offer: '59% OFF',
+        brand:'Max'
     },
     {
         id: '4',
-        title: 'Roadster',
+        title: 'WROGN',
         subtitle: 'Printed Round Neck T-shirt',
         price: 'Rs. 249',
         originalPrice: 'Rs. 499',
-        offer: '50% OFF'
+        offer: '50% OFF',
+        brand:'WROGN'
     },
     {
         id: '5',
-        title: 'Nautica',
+        title: 'Max',
         subtitle: 'Men Colourblocked Polo',
         price: 'Rs. 1499',
         originalPrice: 'Rs. 1599',
-        offer: '40% OFF'
+        offer: '40% OFF',
+        brand: 'Max'
     },
     {
         id: '6',
@@ -47,7 +52,8 @@ export const listItems: ListItem[] = [
         subtitle: 'Solid Round Neck T-shirt',
         price: 'Rs. 239',
         originalPrice: 'Rs. 599',
-        offer: '60% OFF'
+        offer: '60% OFF',
+        brand:'Roadster'
     },
     {
         id: '7',
@@ -55,55 +61,62 @@ export const listItems: ListItem[] = [
         subtitle: 'Solid Round Neck T-shirt',
         price: 'Rs. 239',
         originalPrice: 'Rs. 599',
-        offer: '60% OFF'
+        offer: '60% OFF',
+        brand:'Roadster'
     },
     {
         id: '8',
-        title: 'Roadster',
+        title: 'Max',
         subtitle: 'Solid Round Neck T-shirt',
         price: 'Rs. 239',
         originalPrice: 'Rs. 599',
-        offer: '60% OFF'
+        offer: '60% OFF',
+        brand: 'Max'
     },
     {
         id: '9',
-        title: 'Roadster',
+        title: 'Max',
         subtitle: 'Solid Round Neck T-shirt',
         price: 'Rs. 239',
         originalPrice: 'Rs. 599',
-        offer: '60% OFF'
+        offer: '60% OFF',
+        brand: 'Max'
     },
     {
         id: '10',
-        title: 'Roadster',
+        title: 'Puma',
         subtitle: 'Solid Round Neck T-shirt',
         price: 'Rs. 239',
         originalPrice: 'Rs. 599',
-        offer: '60% OFF'
+        offer: '60% OFF',
+        brand: 'Puma'
     },
     {
         id: '11',
-        title: 'Roadster',
+        title: 'Allen Solly',
         subtitle: 'Solid Round Neck T-shirt',
         price: 'Rs. 239',
         originalPrice: 'Rs. 599',
-        offer: '60% OFF'
+        offer: '60% OFF',
+        brand: 'Allen Solly'
     },
     {
         id: '12',
-        title: 'Roadster',
+        title: 'Allen Solly',
         subtitle: 'Solid Round Neck T-shirt',
         price: 'Rs. 239',
         originalPrice: 'Rs. 599',
-        offer: '60% OFF'
+        offer: '60% OFF',
+        brand: 'Allen Solly'
     },
     {
         id: '13',
-        title: 'Roadster',
+        title: 'Arrow',
         subtitle: 'Solid Round Neck T-shirt',
         price: 'Rs. 239',
         originalPrice: 'Rs. 599',
-        offer: '60% OFF'
+        offer: '60% OFF',
+        brand: 'Arrow'
     },
     {
         id: '14',
@@ -111,14 +124,16 @@ export const listItems: ListItem[] = [
         subtitle: 'Solid Round Neck T-shirt',
         price: 'Rs. 239',
         originalPrice: 'Rs. 599',
-        offer: '60% OFF'
+        offer: '60% OFF',
+        brand: 'Puma'
     },
     {
         id: '15',
-        title: 'Roadster',
+        title: 'Jack & Jones',
         subtitle: 'Solid Round Neck T-shirt',
         price: 'Rs. 239',
         originalPrice: 'Rs. 599',
-        offer: '60% OFF'
+        offer: '60% OFF',
+        brand: 'Jack & Jones'
     }
 ]
