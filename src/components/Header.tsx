@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 function Header() {
   return (
     <StyledHeader>
-      <Logo src="./assets/logo.png" alt="" />
+      <Link to='/'><Logo src="./assets/logo.png" alt="" /></Link>
       <HeaderMainContent>
         <HeaderNav>
           <div>MEN</div>
